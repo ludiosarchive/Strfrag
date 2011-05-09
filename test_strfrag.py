@@ -1,5 +1,4 @@
-import sys
-from twisted.trial import unittest
+import unittest
 
 from strfrag import StringFragment
 
