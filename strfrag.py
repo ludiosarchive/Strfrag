@@ -1,4 +1,4 @@
-__version__ = '11.5.9'
+__version__ = '11.5.9.1'
 
 
 class StringFragment(object):
