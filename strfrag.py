@@ -63,9 +63,9 @@ class StringFragment(object):
 		return StringFragment(self._string, newStart, max(0, maximumLength))
 
 
-	# TODO: toMemoryview # Python does not provide a __memoryview__
+	# TODO: as_memoryview # Python does not provide a __memoryview__
 
-	def toBuffer(self): # Python does not provide a __buffer__
+	def as_buffer(self): # Python does not provide a __buffer__
 		"""
 		Return a C{buffer} object for the fragment. Note that Python
 		will not collect the underlying string object if there is a buffer
@@ -80,12 +80,12 @@ class StringFragment(object):
 
 
 	def __hash__(self):
-		return hash(self.toBuffer())
+		return hash(self.as_buffer())
 
 
 	def __eq__(self, other):
-		return False if type(self) != type(other) else self.toBuffer() == other.toBuffer()
+		return False if type(self) != type(other) else self.as_buffer() == other.as_buffer()
 
 
 	def __ne__(self, other):
-		return True if type(self) != type(other) else self.toBuffer() != other.toBuffer()
+		return True if type(self) != type(other) else self.as_buffer() != other.as_buffer()

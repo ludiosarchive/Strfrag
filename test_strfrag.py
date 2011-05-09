@@ -50,14 +50,14 @@ class StringFragmentTests(unittest.TestCase, ReallyEqualMixin):
 	def test_stringFragmentFull(self):
 		f = StringFragment("helloworld", 0, 10)
 		self.assertEqual("helloworld", str(f))
-		self.assertEqual(buffer("helloworld"), f.toBuffer())
+		self.assertEqual(buffer("helloworld"), f.as_buffer())
 		self.assertEqual(10, len(f))
 
 
 	def test_stringFragmentPartial(self):
 		f = StringFragment("helloworld", 1, 4)
 		self.assertEqual("ello", str(f))
-		self.assertEqual(buffer("ello"), f.toBuffer())
+		self.assertEqual(buffer("ello"), f.as_buffer())
 		self.assertEqual(4, len(f))
 
 
