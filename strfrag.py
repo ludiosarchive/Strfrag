@@ -56,10 +56,8 @@ class StringFragment(object):
 
 
 	def __getslice__(self, start, end):
-		##print self, start, end
 		maximumLength = min(self.size - start, end - start)
 		newStart = self._pos + start
-		##print newStart, maximumLength
 		return StringFragment(self._string, newStart, max(0, maximumLength))
 
 
@@ -76,7 +74,7 @@ class StringFragment(object):
 
 	def __str__(self):
 		pos = self._pos
-		return self._string[pos:pos+self.size]
+		return self._string[pos:pos + self.size]
 
 
 	def __hash__(self):
