@@ -1,8 +1,5 @@
 __version__ = '11.5.9'
 
-import sys
-import warnings
-
 
 class StringFragment(object):
 	"""
