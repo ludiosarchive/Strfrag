@@ -82,8 +82,12 @@ class StringFragment(object):
 
 
 	def __eq__(self, other):
-		return False if type(self) != type(other) else self.as_buffer() == other.as_buffer()
+		if type(self) != type(other):
+			return False
+		return self.as_buffer() == other.as_buffer()
 
 
 	def __ne__(self, other):
-		return True if type(self) != type(other) else self.as_buffer() != other.as_buffer()
+		if type(self) != type(other):
+			return True
+		return self.as_buffer() != other.as_buffer()
