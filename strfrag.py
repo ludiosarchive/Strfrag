@@ -3,14 +3,14 @@ __version__ = '11.5.9.1'
 
 class StringFragment(object):
 	"""
-	Represents a fragment of a string. Used to avoid copying, especially in
+	Represents a fragment of a string.  Used to avoid copying, especially in
 	network protocols.
 
 	DO NOT adjust the attributes of the object after you instantiate it; this
 	is faux-immutable.
 
 	You can slice a L{StringFragment}, which will return a new
-	L{StringFragment}. You can index it, which will return a 1-byte C{str}.
+	L{StringFragment}.  You can index it, which will return a 1-byte C{str}.
 
 	Equal and hash-equivalent to other L{StringFragment}s that represent
 	the same string fragment.
@@ -62,7 +62,7 @@ class StringFragment(object):
 
 	def as_buffer(self): # Python does not provide a __buffer__
 		"""
-		Return a C{buffer} object for the fragment. Note that Python
+		Return a C{buffer} object for the fragment.  Note that Python
 		will not collect the underlying string object if there is a buffer
 		of it.
 		"""
