@@ -1,5 +1,5 @@
-Strfrag overview
-================
+Strfrag
+=======
 
 A `strfrag.StringFragment` represents part of a `str` object.
 This can be used to avoid copying long `str` objects as you
@@ -27,8 +27,7 @@ True
 
 
 
-Installation
-============
+## Installation
 
 `python setup.py install`
 
@@ -36,17 +35,6 @@ This installs the modules `strfrag` and `test_strfrag`.
 
 
 
-Running the tests
-=================
+## Running the tests
 
 Install Twisted, then run `trial strfrag`
-
-
-
-Contributing
-============
-
-Patches and pull requests are welcome.
-
-This coding standard applies: http://ludios.org/coding-standard/
-, except don't camel-case anything in `strfrag.py`.
